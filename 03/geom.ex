@@ -6,15 +6,15 @@ defmodule Geom do
   @doc """
   Calculates the area of a rectangle
   """
-  def area(:rectangle, x, y) do
+  def area(:rectangle, x, y) when x >= 0 and y >= 0 do
     x * y
   end
 
-  def area(:triangle, x, y) do 
+  def area(:triangle, x, y) when x >= 0 and y >= 0 do 
     (x * y) / 2.0
   end
 
-  def area(:ellipse, x, y) do
+  def area(:ellipse, x, y) when x >= 0 and y >= 0 do
     :math.pi() * x * y
   end
 end
