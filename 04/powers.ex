@@ -4,7 +4,7 @@ defmodule Powers do
     1
   end
 
-  def r(x, n) when n == 1 do
+  def r(x, 1) do
     x
   end
 
@@ -16,7 +16,7 @@ defmodule Powers do
     1.0 / r(x, -n)
   end
 
-  defp r(x, n, acc) when n == 0 do
+  defp r(_, 0, acc) do
     acc
   end
   
